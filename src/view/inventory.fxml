@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="500.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.inventoryController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="480.0" prefWidth="170.0" spacing="10.0">
+               <children>
+                  <Label text="Inventroy Details" />
+                  <VBox>
+                     <children>
+                        <Label text="Product" />
+                        <ChoiceBox fx:id="product" disable="true" prefHeight="25.0" prefWidth="170.0" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label layoutX="10.0" layoutY="37.0" text="Quantity" />
+                        <TextField fx:id="quantity" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="177.0" text="Edit" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="table" prefHeight="480.0" prefWidth="507.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="productColumn" prefWidth="224.0" text="Product" />
+                <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="174.0" text="Category" />
+                  <TableColumn fx:id="quantityColumn" minWidth="6.0" prefWidth="211.0" text="Quantity" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</VBox>

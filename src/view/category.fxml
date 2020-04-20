@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.categoryController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="250.0" prefWidth="200.0" spacing="20.0" style="-fx-border-color: #ccc;">
+               <children>
+                  <Label text="Category Details" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label text="Name:" />
+                        <TextField fx:id="name" />
+                     </children>
+                  </VBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="60.0" text="Save" />
+                        <Button fx:id="editbtn" disable="true" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="60.0" text="Edit" />
+                        <Button fx:id="deletebtn" disable="true" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <TableView fx:id="table" prefHeight="490.0" prefWidth="441.0" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="529.0" text="Name" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
